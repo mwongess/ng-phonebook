@@ -1,2 +1,2 @@
-# ng-phonebook
+# Phonebook
 Kurasa Angular Screening
