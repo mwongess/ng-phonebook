@@ -2,7 +2,7 @@
 
 ## Angular Screening
 
-### Challenge
+## Challenge
 
 1. Use a database or a datastore of your liking for storage. Even mock data in
 arrays is fine – but it must be the same datastore for the whole project.
