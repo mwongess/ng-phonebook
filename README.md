@@ -26,7 +26,7 @@ Address ETC.
 
 ### Project setup
 
-#### Spin up backend
+#### Spin up server
 
 ```sh
     cd backend
