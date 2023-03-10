@@ -23,3 +23,33 @@ whether to view as grid or as list.
 The basic fields for the Contact Details will be First Name, Last Name, Email and
 Phone Number…feel free to add any of your own liking e.g., Contact Image, Physical
 Address ETC.
+
+### Project setup
+
+#### Spin up backend
+
+```sh
+    cd backend
+```
+
+```sh
+    npm i
+```
+
+```sh
+    npm start
+```
+
+#### Spin up the UI
+
+```sh
+    cd frontend
+```
+
+```sh
+    npm i
+```
+
+```sh
+    ng serve -o
+```
