@@ -26,7 +26,7 @@ Address ETC.
 
 ### Project setup
 
-#### Spin up server
+#### 1.Spin up server
 
 ```sh
     cd backend
@@ -40,7 +40,7 @@ Address ETC.
     npm start
 ```
 
-#### Spin up the UI
+#### 2.Spin up the UI
 
 ```sh
     cd frontend
