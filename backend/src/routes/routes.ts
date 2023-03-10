@@ -16,7 +16,7 @@ const routes: FastifyPluginCallback = (fastify, options, done) => {
     >request.body;
     reply.send(request.body);
   });
-  
+
   fastify.put("/", async (request: FastifyRequest, reply: FastifyReply) => {
     const { id } = <{ id: string }>request.params;
   });
