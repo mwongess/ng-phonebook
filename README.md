@@ -1,5 +1,6 @@
 # Phonebook
-Kurasa Angular Screening
+
+## Angular Screening
 
 ### Challenge
 
