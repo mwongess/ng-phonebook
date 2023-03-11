@@ -1,29 +1,22 @@
 import { FastifyPluginCallback, FastifyReply, FastifyRequest } from "fastify";
+import {
+  deleteContact,
+  getContact,
+  getContacts,
+  newContact,
+  updateContact,
+} from "../controllers/controllers";
 
 const routes: FastifyPluginCallback = (fastify, options, done) => {
-  fastify.get("/", async (request, reply) => {
-    reply.send({ contacts: [] });
-  });
+  fastify.post("/", newContact);
 
-  fastify.get("/:id", async (request: FastifyRequest, reply: FastifyReply) => {
-    const { id } = <{ id: string }>request.params;
-    reply.send(id);
-  });
+  fastify.get("/", getContacts);
 
-  fastify.post("/", async (request: FastifyRequest, reply: FastifyReply) => {
-    const { name, phone, email } = <
-      { name: string; phone: number; email: string }
-    >request.body;
-    reply.send(request.body);
-  });
+  fastify.get("/:id", getContact);
 
-  fastify.put("/", async (request: FastifyRequest, reply: FastifyReply) => {
-    const { id } = <{ id: string }>request.params;
-  });
+  fastify.put("/", updateContact);
 
-  fastify.delete("/", async (request: FastifyRequest, reply: FastifyReply) => {
-    const { id } = <{ id: string }>request.params;
-  });
+  fastify.delete("/", deleteContact);
   done();
 };
 

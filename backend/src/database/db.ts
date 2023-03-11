@@ -1,8 +1,5 @@
 import { pool } from "../config/config";
 
-const getDb = () => {
-  pool;
-};
+const getDb = () =>  pool;
 
-export const db = getDb()
-
+export const db = getDb();
