@@ -14,9 +14,9 @@ const routes: FastifyPluginCallback = (fastify, options, done) => {
 
   fastify.get("/:id", getContact);
 
-  fastify.put("/", updateContact);
+  fastify.put("/:id", updateContact);
 
-  fastify.delete("/", deleteContact);
+  fastify.delete("/:id", deleteContact);
   done();
 };
 

@@ -24,7 +24,8 @@ export const getContacts = async (
   try {
     const query = `SELECT * FROM CONTACTS`;
     const connection = await db.getConnection();
-    const [rows]= await connection.query(query);
+    const [rows]= await connection.execute(query);
+    connection.release()
     reply.send(rows);
   } catch (error) {
     reply.send(error);
@@ -39,7 +40,8 @@ export const getContact = async (
   const { id } = <{ id: string }>request.params;
   const query = `SELECT * FROM contacts WHERE id = ${id}`
   const connection = await db.getConnection()
-  const [row] = await connection.query(query)
+  const [row] = await connection.execute(query)
+  connection.release()
   reply.send(row)
  } catch (error) {
   reply.send(error)
@@ -52,12 +54,29 @@ export const updateContact = async (
 ) => {
   try {
     const { id } = <{ id: string }>request.params;
-  } catch (error) {}
+     const { name, phone, email } = <{ name: string; phone: number; email: string }>request.body;
+    const query = `UPDATE contacts SET name = ?,phone = ?, email = ? WHERE id = ?`
+    const connection = await db.getConnection()
+    await connection.execute(query, [name, phone, email, id])
+    connection.release()
+    reply.send({message: "Contact updated successfully"})
+  } catch (error) {
+    reply.send(error)
+  }
 };
 
 export const deleteContact = async (
   request: FastifyRequest,
   reply: FastifyReply
 ) => {
-  const { id } = <{ id: string }>request.params;
+  try {
+    const { id } = <{ id: string }>request.params;
+    const query = `DELETE FROM contacts WHERE id = ?`
+    const connection = await db.getConnection()
+    await connection.execute(query, [id],)
+    connection.release()
+    reply.send({message: "Contact deleted successfully"})
+  } catch (error) {
+    reply.send(error)
+  }
 };
