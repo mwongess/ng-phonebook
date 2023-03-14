@@ -22,7 +22,7 @@ export const getContacts = async (
   reply: FastifyReply
 ) => {
   try {
-    const query = `SELECT * FROM CONTACTS`;
+    const query = `SELECT * FROM contacts`;
     const connection = await db.getConnection();
     const [rows]= await connection.execute(query);
     connection.release()
