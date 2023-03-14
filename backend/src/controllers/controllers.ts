@@ -38,9 +38,9 @@ export const getContact = async (
 ) => {
  try {
   const { id } = <{ id: string }>request.params;
-  const query = `SELECT * FROM contacts WHERE id = ${id}`
+  const query = `SELECT * FROM contacts WHERE id = ?`
   const connection = await db.getConnection()
-  const [row] = await connection.execute(query)
+  const [row] = await connection.execute(query, [id])
   connection.release()
   reply.send(row)
  } catch (error) {
