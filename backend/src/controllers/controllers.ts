@@ -8,7 +8,7 @@ export const newContact = async (
   try {
     const { name, phone, email } = <{ name: string; phone: number; email: string }>request.body;
     const connection = await db.getConnection();
-    const query = `INSERT INTO contacts (name, phone, email) VALUES  (?, ?, ?) `;
+    const query = "INSERT INTO contacts (name, phone, email) VALUES  (?, ?, ?) ";
     await connection.execute(query, [name, phone, email])
     connection.release()
     reply.send({message: "Contact added successfully"})
@@ -54,7 +54,7 @@ export const updateContact = async (
 ) => {
   try {
     const { id } = <{ id: string }>request.params;
-     const { name, phone, email } = <{ name: string; phone: number; email: string }>request.body;
+    const { name, phone, email } = <{ name: string; phone: number; email: string }>request.body;
     const query = `UPDATE contacts SET name = ?,phone = ?, email = ? WHERE id = ?`
     const connection = await db.getConnection()
     await connection.execute(query, [name, phone, email, id])
