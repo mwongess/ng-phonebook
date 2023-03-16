@@ -40,8 +40,11 @@ export const getContact = async (
   const { id } = <{ id: string }>request.params;
   const query = `SELECT * FROM contacts WHERE id = ?`
   const connection = await db.getConnection()
-  const [row] = await connection.execute(query, [id])
+  const [row]:any[] = await connection.execute(query, [id])
   connection.release()
+  if(!row[0]){
+    reply.send({message: "Contact not found"})
+  }
   reply.send(row)
  } catch (error) {
   reply.send(error)

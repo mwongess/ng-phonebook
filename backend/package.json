@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:run": "tsc -w ",
-    "start:build": "node --watch dest/server.js",
+    "start:build": "nodemon dest/server.js",
     "dev": "concurrently npm:start:*"
   },
   "keywords": [],
@@ -15,7 +15,8 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "fastify": "^4.14.1",
-    "mysql2": "^3.2.0"
+    "mysql2": "^3.2.0",
+    "nodemon": "^2.0.21"
   },
   "devDependencies": {
     "@types/node": "^18.15.0",
