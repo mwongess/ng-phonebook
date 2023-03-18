@@ -76,7 +76,10 @@ export const deleteContact = async (
     const { id } = <{ id: string }>request.params;
     const connection = await db.getConnection()
     const query1 = `SELECT * FROM contacts`
-    const [rows]= await connection.execute(query1);
+    const [row]: any[]= await connection.execute(query1);
+    if(!row[1]){
+      reply.send({message: "Contact not found"})
+    }
     const query = `DELETE FROM contacts WHERE id = ?`
     await connection.execute(query, [id],)
     connection.release()
