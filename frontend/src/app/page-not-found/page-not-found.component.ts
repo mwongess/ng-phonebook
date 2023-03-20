@@ -9,5 +9,6 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./page-not-found.component.css']
 })
 export class PageNotFoundComponent {
-
+  message: string = 'The page youre looking for cannot be found!!'
+  constructor(){}
 }
