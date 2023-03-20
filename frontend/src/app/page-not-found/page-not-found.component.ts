@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute,Data } from '@angular/router';
 
 @Component({
   selector: 'app-page-not-found',
@@ -8,7 +9,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './page-not-found.component.html',
   styleUrls: ['./page-not-found.component.css']
 })
-export class PageNotFoundComponent {
-  message: string = 'The page youre looking for cannot be found!!'
-  constructor(){}
+export class PageNotFoundComponent implements  OnInit {
+  message: string = ''
+  constructor(private route: ActivatedRoute){}
+  ngOnInit(): void {
+    this.route.data.subscribe((data:Data)=>{
+     this.message=data['message']
+    }) 
+   }
 }
