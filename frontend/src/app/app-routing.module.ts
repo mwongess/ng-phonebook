@@ -7,7 +7,7 @@ const routes: Routes = [
     loadComponent: () =>
       import('./page-not-found/page-not-found.component').then(
         (n) => n.PageNotFoundComponent
-      ),data: {message: 'Page cannot be found'}
+      ),data: {error: '404',message: 'Page cannot be found'}
   },
   {
     path: '**',
