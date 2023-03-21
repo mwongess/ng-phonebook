@@ -3,6 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+path: '',
+loadComponent: ()=>
+  },
+  {
     path: 'error',
     loadComponent: () =>
       import('./page-not-found/page-not-found.component').then(
