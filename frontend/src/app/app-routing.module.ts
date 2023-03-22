@@ -3,13 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: 'contacts',
     loadComponent: () =>
       import('./home/home.component').then((h) => h.HomeComponent),
       children: [
         {
           path: '',
           loadComponent: ()=> import('./contact-list/contact-list.component').then(cl => cl.ContactListComponent)
+        },
+        {
+          path: 'add/new',
+          loadComponent: ()=> import('./contact-form/contact-form.component').then(cf => cf.ContactFormComponent)
         }
       ]
   },
