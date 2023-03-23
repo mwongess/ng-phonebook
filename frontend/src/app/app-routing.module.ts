@@ -14,7 +14,10 @@ const routes: Routes = [
         {
           path: 'add/new',
           loadComponent: ()=> import('./contact-form/contact-form.component').then(cf => cf.ContactFormComponent)
-        }
+        },
+        // {
+        //   path: ':id/edit'
+        // }
       ]
   },
   {
