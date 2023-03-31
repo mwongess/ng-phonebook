@@ -1,5 +1,10 @@
-img{
+button img{
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
+}
+p img{
+    margin-right: 0.7rem;
+    height: 0.9rem;
+    width: 0.9rem;
 }

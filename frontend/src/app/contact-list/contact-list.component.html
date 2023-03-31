@@ -1,6 +1,6 @@
 <div class="">
   <div>
-    <input class="form-control" type="search" placeholder="Search Contacts" />
+    <input class="form-control border-success-subtle" type="search" placeholder="Search Contacts" />
   </div>
   <hr />
   <div class="accordion" *ngFor="let contact of contacts">
@@ -15,13 +15,16 @@
           aria-controls="flush-collapseTwo"
         >
           <img
-            src="https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/help-center/contact-us/03-images/v2/2021-chevy-account-icon.png?imwidth=960"
+            src="../../assets/images/profile-icon.png"
             alt="profile"
-          /><span class="mx-3">{{ contact.name }}</span>
+          /><span class="mx-2">{{ contact.name }}</span>
         </button>
       </h2>
       <div id="flush-collapseTwo" class="accordion-collapse collapse">
-        <div class="accordion-body">Information.</div>
+        <div class="accordion-body">
+          <p><img src="../../assets/images/call-icon.png" alt="">{{'+' + contact.phone}}</p>
+          <p><img src="../../assets/images/download-removebg-preview.png" alt="">{{contact.email}}</p>
+        </div>
       </div>
     </div>
   </div>

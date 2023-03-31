@@ -11,12 +11,12 @@ import { CommonModule } from '@angular/common';
 export class ContactListComponent {
   contacts: { name: string; email: string; phone: number}[] = [{
     name: 'Amos',
-    email: "ams@gmail.com",
-    phone: +254754322
+    email: "amos@gmail.com",
+    phone: 254742971932
   },{
     name: 'Mwongela',
-    email: "ams@gmail.com",
-    phone: +254754322
+    email: "mwongess@gmail.com",
+    phone: 254797377943
   }];
   constructor() {}
 
