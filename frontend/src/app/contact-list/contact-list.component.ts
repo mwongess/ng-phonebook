@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { SearchPipe } from "../pipes/search.pipe";
 import { FormsModule } from '@angular/forms';
 
@@ -42,6 +42,9 @@ export class ContactListComponent {
     email: "bob.johnson@example.com",
     phone: 25456789012,
   }];
-  constructor() {}
+  constructor(private router: Router,private route: ActivatedRoute) {}
+  seemoreDetails(id: string | number){
+    this.router.navigate([`/contact/details/${id}`], {relativeTo: this.route})
+  }
 
 }
