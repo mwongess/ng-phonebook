@@ -1,16 +1,17 @@
 <div class="">
+  <h6>Contacts</h6>
   <div>
-    <input class="form-control border-success-subtle" type="search" placeholder="Search Contacts" />
+    <input class="form-control border-success-subtle" type="search" placeholder="Search Contacts" [(ngModel)]="searchText"/>
   </div>
   <hr />
-  <div class="accordion" *ngFor="let contact of contacts">
+  <div class="accordion" *ngFor="let contact of contacts | search: searchText">
     <div class="accordion-item my-2">
       <h2 class="accordion-header">
         <button
           class="accordion-button collapsed"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseTwo"
+          attr.data-bs-target="{{'#'+contact.id}}"
           aria-expanded="false"
           aria-controls="flush-collapseTwo"
         >
@@ -20,7 +21,7 @@
           /><span class="mx-2">{{ contact.name }}</span>
         </button>
       </h2>
-      <div id="flush-collapseTwo" class="accordion-collapse collapse">
+      <div id="{{contact.id}}" class="accordion-collapse collapse">
         <div class="accordion-body">
           <p><img src="../../assets/images/call-icon.png" alt="">{{'+' + contact.phone}}</p>
           <p><img src="../../assets/images/download-removebg-preview.png" alt="">{{contact.email}}</p>
