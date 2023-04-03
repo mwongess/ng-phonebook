@@ -11,18 +11,18 @@
 <hr>
   <div class="text-center profile">
     <img src="../../assets/images/profile-icon.png" alt="profile-pic" />
-    <h4>Name</h4>
+    <h4>{{contact.name}}</h4>
   </div>
   <div class="card details p-3">
     <div>
         <h6>Contact Info</h6>
     </div>
-    <p><img src="../../assets/images/call-icon.png" alt="phone"><span>Mobile</span></p>
-    <p><img src="../../assets/images/whatsapp.png" alt="whatsapp"><span>Message </span></p>
-    <p><img src="../../assets/images/whatsapp.png" alt="whatsapp"><span>Voice Call</span></p>
-    <p><img src="../../assets/images/whatsapp.png" alt="whatsapp"><span>Video Call</span></p>
+    <p><img src="../../assets/images/call-icon.png" alt="phone"><span>Mobile</span>  {{' +' + contact.phone}}</p>
+    <p><img src="../../assets/images/whatsapp.png" alt="whatsapp"><span>Message </span>  {{' +' + contact.phone}}</p>
+    <p><img src="../../assets/images/whatsapp.png" alt="whatsapp"><span>Voice Call</span>  {{' +' + contact.phone}}</p>
+    <p><img src="../../assets/images/whatsapp.png" alt="whatsapp"><span>Video Call</span>  {{' +' + contact.phone}}</p>
   </div>
   <div class="text-center">
-    <p>Created on:</p>
+    <p>Created on: Loading...</p>
   </div>
 </div>
