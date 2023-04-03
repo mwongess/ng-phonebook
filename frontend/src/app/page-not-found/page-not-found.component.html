@@ -1,4 +1,10 @@
-<div class="alert alert-danger d-flex flex-column justify-content-center align-items-center h-100">
-    <h3>{{error}}</h3>
-    <h4>{{message}}</h4>
+<div
+  class="alert alert-danger d-flex flex-column justify-content-center align-items-center h-100"
+>
+  <div>
+    <h3>{{ "ERROR: " + error }}</h3>
+    <h4>{{ message }}</h4>
+    <button class="btn btn-outline-dark" (click)="goBack()">Go Back</button>
+  </div>
+  
 </div>

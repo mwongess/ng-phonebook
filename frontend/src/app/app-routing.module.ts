@@ -15,6 +15,11 @@ const routes: Routes = [
           path: 'add/new',
           loadComponent: ()=> import('./contact-form/contact-form.component').then(cf => cf.ContactFormComponent)
         },
+        // {
+        //   path: 'contact/:id/edit',
+        //   loadComponent: ()=> import('')
+        // }
+        // ,
         {
           path: 'contact/details/:id',
           loadComponent: ()=> import('./contact-details/contact-details.component').then(cd=>cd.ContactDetailsComponent)
@@ -27,7 +32,7 @@ const routes: Routes = [
       import('./page-not-found/page-not-found.component').then(
         (n) => n.PageNotFoundComponent
       ),
-    data: { error: '404', message: 'Page cannot be found' },
+    data: { error: '404', message: 'Route not yet implemented!' },
   },
   {
     path: '**',

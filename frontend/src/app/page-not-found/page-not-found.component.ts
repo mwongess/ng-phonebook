@@ -12,11 +12,17 @@ import { ActivatedRoute, Data } from '@angular/router';
 export class PageNotFoundComponent implements OnInit {
   error: string = '';
   message: string = '';
+
   constructor(private route: ActivatedRoute) {}
+
   ngOnInit(): void {
     this.route.data.subscribe((data: Data) => {
       this.error = data['error'];
       this.message = data['message'];
     });
+  }
+  
+  goBack(){
+    history.back()
   }
 }
