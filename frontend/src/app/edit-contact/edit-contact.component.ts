@@ -9,5 +9,9 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./edit-contact.component.css']
 })
 export class EditContactComponent {
-
+  constructor(){}
+  
+  goBack(){
+    history.back()
+  }
 }
