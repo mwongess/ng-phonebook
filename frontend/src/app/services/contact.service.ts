@@ -8,32 +8,37 @@ export class ContactService {
   contacts: contact[] = [
     {
       id: 'qwert4',
-      name: 'Amos',
+      firstName: "Amos",
+      lastName: 'Mwongela',
       email: "amos@gmail.com",
-      phone: 254742971932
+      phone: "254 742971932"
     },{
       id: '9ij9ij',
-      name: 'Mwongela',
+      firstName: "Mwongela",
+      lastName: 'Gabriel',
       email: "mwongess@gmail.com",
-      phone: 254797377943
+      phone: "254 797 377943"
     },
     {
       id: '1',
-      name: "John Doe",
+      firstName: "John",
+      lastName: "Doe",
       email: "john.doe@example.com",
-      phone: 25434567890,
+      phone: "254 345 67890",
     },
     {
       id:'2',
-      name: "Jane Smith",
+      firstName: "Jane ",
+      lastName: "Smith",
       email: "jane.smith@example.com",
-      phone: 25445678901,
+      phone: "254 456 78901",
     },
     {
       id: '3',
-      name: "Bob Johnson",
+      firstName: "Bob ",
+      lastName: "Johnson",
       email: "bob.johnson@example.com",
-      phone: 25456789012,
+      phone: "254 567 89012",
     }
   ]
   constructor() { }

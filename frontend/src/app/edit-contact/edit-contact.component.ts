@@ -22,7 +22,7 @@ export class EditContactComponent implements OnInit {
     private route: ActivatedRoute,
     private contactService: ContactService
   ) {}
-  
+
   ngOnInit() {
     this.getId();
     this.getContact();
@@ -41,8 +41,8 @@ export class EditContactComponent implements OnInit {
   }
   populateForm() {
     this.editContactForm = new FormGroup({
-      firstName: new FormControl(),
-      lastName: new FormControl(),
+      firstName: new FormControl(this.contact.firstName),
+      lastName: new FormControl(this.contact.lastName),
       company: new FormControl(),
       phone: new FormControl(this.contact.phone),
       email: new FormControl(this.contact.email),
