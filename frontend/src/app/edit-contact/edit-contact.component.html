@@ -1,5 +1,5 @@
 <div>
-    <form>
+    <form [formGroup]="editContactForm">
       <div class="d-flex align-items-center justify-content-between mytop">
         <h5 (click)="goBack()"><b>X</b></h5>
         <h5>Edit contact</h5>
@@ -15,6 +15,7 @@
             class="image"
             id="profile-image"
             aria-describedby="profile-image-help"
+            
           />
         </div>
         <label class="label" for="profile-image"></label>
@@ -24,17 +25,19 @@
         type="text"
         class="form-control mt-3"
         placeholder="First Name"
+        formControlName="firstName"
         required
       />
       <input
         type="text"
         class="form-control my-3"
         placeholder="Last Name"
+        formControlName="lastName"
         required
       />
-      <input type="text" class="form-control" placeholder="Company" required />
-      <input type="text" class="form-control my-3" placeholder="Phone" required />
-      <input type="email" class="form-control" placeholder="Email" required />
+      <input type="text" class="form-control" placeholder="Company" formControlName="company" required />
+      <input type="text" class="form-control my-3" placeholder="Phone" formControlName="phone" required />
+      <input type="email" class="form-control" placeholder="Email" formControlName="email" required />
     </form>
   </div>
   

@@ -12,18 +12,23 @@ import { ContactService } from '../services/contact.service';
   styleUrls: ['./contact-details.component.css'],
 })
 export class ContactDetailsComponent implements OnInit {
-  contact!: contact
-  id: string | number = ''
-  constructor(private router: Router, private route: ActivatedRoute,private contactService: ContactService) {}
-  ngOnInit(){
-    this.route.params.subscribe(params=>{
-      this.id = params['id']
+  contact!: contact;
+  id: string | number = '';
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private contactService: ContactService
+  ) {}
+  ngOnInit() {
+    this.route.params.subscribe((params) => {
+      this.id = params['id'];
 
-      this.contact = this.contactService.getContacts().filter(contact => {
-        return contact.id == this.id
-      })[0]
-
-    })
+      this.contact = this.contactService.getContacts().filter((contact) => {
+        return contact.id == this.id;
+      })[0];
+    });
   }
-
+  gotoEdit() {
+    this.router.navigate([`contact/${this.id}/edit`]);
+  }
 }
