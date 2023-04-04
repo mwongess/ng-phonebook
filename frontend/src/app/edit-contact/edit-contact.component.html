@@ -1,1 +1,40 @@
-<p>edit-contact works!</p>
+<div>
+    <form>
+      <div class="d-flex align-items-center justify-content-between mytop">
+        <h5 routerLink="/"><b>X</b></h5>
+        <h5>Edit contact</h5>
+        <button class="btn btn-success">Save</button>
+      </div>
+      <hr>
+      <div
+        class="form-group d-flex justify-content-center align-items-center flex-column"
+      >
+        <div class="input-group mb-3">
+          <input
+            type="file"
+            class="image"
+            id="profile-image"
+            aria-describedby="profile-image-help"
+          />
+        </div>
+        <label class="label" for="profile-image"></label>
+        <label class="form-label my-2" for="">Profile Image</label>
+      </div>
+      <input
+        type="text"
+        class="form-control mt-3"
+        placeholder="First Name"
+        required
+      />
+      <input
+        type="text"
+        class="form-control my-3"
+        placeholder="Last Name"
+        required
+      />
+      <input type="text" class="form-control" placeholder="Company" required />
+      <input type="text" class="form-control my-3" placeholder="Phone" required />
+      <input type="email" class="form-control" placeholder="Email" required />
+    </form>
+  </div>
+  

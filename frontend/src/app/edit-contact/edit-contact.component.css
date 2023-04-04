@@ -1,0 +1,25 @@
+input[type="file"] {
+    display: none;
+  }
+  
+  .label {
+    display: inline-block;
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 50%;
+    background-image: url(../../assets/images/add-pi.png);
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+  }
+  input{
+    height: 3rem;
+  }
+  .btn{
+    width: 4rem;
+    height: 2.5rem;
+  }
+  .mytop{
+    padding: 0.5rem;
+  }
