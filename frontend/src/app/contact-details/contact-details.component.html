@@ -4,7 +4,7 @@
       <img src="../../assets/images/back.png" alt="back" routerLink = "/" />
     </div>
     <div class="right">
-        <img src="../../assets/images/fav.png" alt="favourite" />
+        <img src="../../assets/images/fav.png" alt="favourite" (click)="markFav()"/>
       <button class="btn btn-success" (click)="gotoEdit()">Edit</button>
     </div>
 </div>
@@ -23,6 +23,6 @@
     <p><img src="../../assets/images/whatsapp.png" alt="whatsapp"><span>Video Call</span>  {{' +' + contact.phone}}</p>
   </div>
   <div class="text-center">
-    <p>Created on: Loading...</p>
+    <p>Created on:{{' ' + createdDate}}</p>
   </div>
 </div>

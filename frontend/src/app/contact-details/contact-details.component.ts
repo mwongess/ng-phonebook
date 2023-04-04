@@ -14,19 +14,29 @@ import { ContactService } from '../services/contact.service';
 export class ContactDetailsComponent implements OnInit {
   contact!: contact;
   id: string | number = '';
+  createdDate: string = new Date().toDateString();
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private contactService: ContactService
   ) {}
   ngOnInit() {
+    this.getId();
+    this.getContact();
+  }
+  getId() {
     this.route.params.subscribe((params) => {
       this.id = params['id'];
-
-      this.contact = this.contactService.getContacts().filter((contact) => {
-        return contact.id == this.id;
-      })[0];
     });
+  }
+  getContact() {
+    this.contact = this.contactService.getContacts().filter((contact) => {
+      return contact.id == this.id;
+    })[0];
+  }
+  markFav() {
+    //
   }
   gotoEdit() {
     this.router.navigate([`contact/${this.id}/edit`]);
