@@ -11,14 +11,17 @@ export class ContactService {
       firstName: "Amos",
       lastName: 'Mwongela',
       email: "amos@gmail.com",
-      phone: "254 742 971932"
+      phone: "254 742 971932",
+      isFavorite: false
     },
     {
       id: '9ij9ij',
       firstName: "Mwongela",
       lastName: 'Gabriel',
       email: "mwongess@gmail.com",
-      phone: "254 797 377943"
+      phone: "254 797 377943",
+      isFavorite: false
+
     },
     {
       id: '1',
@@ -26,6 +29,8 @@ export class ContactService {
       lastName: "Doe",
       email: "john.doe@example.com",
       phone: "254 345 67890",
+      isFavorite: false
+
     },
     {
       id:'2',
@@ -33,6 +38,8 @@ export class ContactService {
       lastName: "Smith",
       email: "jane.smith@example.com",
       phone: "254 456 78901",
+      isFavorite: false
+
     },
     {
       id: '3',
@@ -40,6 +47,8 @@ export class ContactService {
       lastName: "Johnson",
       email: "bob.johnson@example.com",
       phone: "254 567 89012",
+      isFavorite: false
+
     }
   ]
   constructor() { }
