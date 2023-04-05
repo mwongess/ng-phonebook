@@ -11,8 +11,9 @@ export class ContactService {
       firstName: "Amos",
       lastName: 'Mwongela',
       email: "amos@gmail.com",
-      phone: "254 742971932"
-    },{
+      phone: "254 742 971932"
+    },
+    {
       id: '9ij9ij',
       firstName: "Mwongela",
       lastName: 'Gabriel',

@@ -10,7 +10,7 @@ export class SearchPipe implements PipeTransform {
     if (!searchText) return contacts;
     searchText = searchText.toLowerCase();
     return contacts.filter((contact) => {
-      return contact.name.toLowerCase().startsWith(searchText);
+      return contact.firstName.toLowerCase().startsWith(searchText);
     });
   }
 }
