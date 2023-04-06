@@ -1,5 +1,5 @@
 <div class="">
-  <h5>Contacts</h5>
+  <h5>{{contacts.length + ' '}} Contacts</h5>
   <div>
     <input class="form-control border-success-subtle" type="search" placeholder="Search Contacts" [(ngModel)]="searchText"/>
   </div>
@@ -25,7 +25,7 @@
       <div id="{{contact.id}}" class="accordion-collapse collapse">
         <div class="accordion-body" (click)="seemoreDetails(contact.id)">
           <p><img src="../../assets/images/call-icon.png" alt="">{{'+' + contact.phone}}</p>
-          <p><img src="../../assets/images/download-removebg-preview.png" alt="">{{contact.email}}</p>
+          <p><img src="../../assets/images/gmail-icon.png" alt="">{{contact.email}}</p>
         </div>
       </div>
     </div>
