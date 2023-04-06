@@ -4,8 +4,11 @@
       <img src="../../assets/images/back.png" alt="back" routerLink = "/" />
     </div>
     <div class="right">
-        <img src="../../assets/images/fav.png" [ngClass]="contact. isFavorite ? 'fav' : ''" alt="favourite" (click)="markFav()"/>
+        <img src="../../assets/images/fav.png" *ngIf="!contact.isFavorite"  alt="favourite" (click)="markFav()"/>
+        <img src="../../assets/images/fav1.png" *ngIf="contact.isFavorite" class="fav" alt="favourite" (click)="markFav()"/>
+
       <button class="btn btn-success" (click)="gotoEdit()">Edit</button>
+      
     </div>
 </div>
 <hr>

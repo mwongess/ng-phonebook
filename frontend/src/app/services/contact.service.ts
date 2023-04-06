@@ -38,7 +38,7 @@ export class ContactService {
       lastName: "Smith",
       email: "jane.smith@example.com",
       phone: "254 456 78901",
-      isFavorite: false
+      isFavorite: true
 
     },
     {
@@ -47,7 +47,7 @@ export class ContactService {
       lastName: "Johnson",
       email: "bob.johnson@example.com",
       phone: "254 567 89012",
-      isFavorite: false
+      isFavorite: true
 
     }
   ]

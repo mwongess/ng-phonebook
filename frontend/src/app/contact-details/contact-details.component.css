@@ -13,8 +13,9 @@ p img{
 .right button{
     margin-left: 2rem;
 }
-.fav{
-    color:  #f0ad4e;
+.fav {
+   height: 2rem;
+   width: 2rem;
 }
 @media only screen and (max-width: 600px){
     .card{
