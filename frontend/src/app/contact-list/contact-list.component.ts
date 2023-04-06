@@ -25,7 +25,7 @@ export class ContactListComponent implements OnInit {
   ngOnInit() {
     this.contacts = this.contactService
       .getContacts()
-      .sort((contact_a, contact_b) =>
+      .sort((contact_a:contact, contact_b:contact) =>
         contact_a.firstName > contact_b.firstName ? 1 : -1
       );
   }
