@@ -13,6 +13,9 @@ p img{
 .right button{
     margin-left: 2rem;
 }
+.fav{
+    color:  #f0ad4e;
+}
 @media only screen and (max-width: 600px){
     .card{
         display: flex;
