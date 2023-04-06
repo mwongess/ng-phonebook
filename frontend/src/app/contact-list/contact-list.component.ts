@@ -14,8 +14,8 @@ import { ContactService } from '../services/contact.service';
   imports: [CommonModule, RouterModule, FormsModule, SearchPipe],
 })
 export class ContactListComponent implements OnInit {
-  searchText: string = '';
-  contacts: contact[] = [];
+  searchText!: string;
+  contacts!: contact[];
   constructor(
     private contactService: ContactService,
     private router: Router,
